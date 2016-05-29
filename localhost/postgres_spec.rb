@@ -17,3 +17,7 @@ end
 describe port(5432) do
   it { should be_listening }
 end
+
+describe file('/etc/cron.daily/postgresql') do
+  it { should exist }
+end
